@@ -36,7 +36,7 @@ if deviceId then
 			selectedRoute = route;
 		end
 		ngx.log(ngx.DEBUG, "selectedRoute for deviceId " .. deviceId .. ": " .. selectedRoute)
-    ngx.log(ngx.DEBUG, "Redirecting for deviceId " .. deviceId .. "to: " .. "http://newhost.com" .. ngx.var.request_uri) 
+                ngx.log(ngx.DEBUG, "Redirecting for deviceId " .. deviceId .. "to: " .. "http://newhost.com" .. ngx.var.request_uri) 
 		ngx.redirect("http://newhost.com" .. ngx.var.request_uri, ngx.HTTP_MOVED_TEMPORARILY, ngx.req.get_headers())
 	end
 end
